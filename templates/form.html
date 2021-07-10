@@ -1,0 +1,23 @@
+
+<html>
+    <head>
+        <body>
+            <div>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form}}
+                    
+                    <input type="submit" />
+                    
+                </form>
+                <h4>All the recorded data</h4>
+
+                {% for allData in allData %}
+                <p>{{allData.input1}}</p>
+                <p>{{allData.input2}}</p>
+                <p>.........................................</p>
+                {% endfor %}
+            </div>
+        </body>
+    </head>
+</html>
